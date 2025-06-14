@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiRequest = axios.create({
-    baseURL: import.meta.env.VITE_API_ENDPOINT,
+    baseURL: "https://artnova-backend.onrender.com",
     withCredentials: true,
 })
 
