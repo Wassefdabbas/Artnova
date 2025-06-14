@@ -1,0 +1,133 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: white;
+  font-size: 14px;
+  width: 100%;
+  height: 450px; /* fixed height for scroll area */
+  overflow: hidden;
+}
+
+.commentCount {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.commentList {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Renamed from .comment to avoid conflict */
+.commentItem {
+  display: flex;
+  gap: 12px;
+}
+
+.commentItem img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.commentContent {
+  background-color: #2a2a2a;
+  padding: 8px 12px;
+  border-radius: 12px;
+  flex: 1;
+}
+
+.commentUserName {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.commentText {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.CommentTime {
+  font-size: 12px;
+  color: #888;
+}
+
+.commentForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1e1e1e;
+  padding: 8px 12px;
+  border: 1px solid #333;
+  border-radius: 16px;
+  gap: 8px;
+}
+
+.commentForm input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 14px;
+}
+
+.emoji {
+  position: relative;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.emojiPicker {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  z-index: 10;
+  transform: scale(0.85); /* Resize emoji picker */
+  transform-origin: bottom right;
+}
+
+.commentList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.commentList::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 4px;
+}
+
+.commentList::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+.commentList::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+.deleteCommentBtn {
+  background: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 0.8rem;
+}
+
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .commentForm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .emojiPicker {
+    bottom: 50px;
+  }
+}

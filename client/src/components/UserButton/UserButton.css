@@ -1,0 +1,99 @@
+/* Base Styling */
+.userButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 30px;
+  background: #1a1a1a;
+  transition: all 0.3s ease;
+  border: 1px solid #333;
+}
+
+.userButton:hover {
+  background: #2a2a2a;
+}
+
+.userButton img:last-of-type {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+}
+
+/* Dropdown Options */
+.userOption {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 10px 0;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeIn 0.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.userOption a,
+.userOption div {
+  padding: 10px 16px;
+  color: #e0e0e0;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s ease;
+}
+
+.userOption a:hover,
+.userOption div:hover {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+/* Login Link Styling */
+.LoginLink {
+  color: #e0e0e0;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+}
+.userButton .imgIcon {
+  filter: brightness(0) invert(1); /* Turns black to white */
+}
+.LoginLink:hover {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .userButton {
+    padding: 6px 10px;
+  }
+
+  .userButton img:first-of-type {
+    width: 20px;
+    height: 20px;
+  }
+
+  .LoginLink {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}

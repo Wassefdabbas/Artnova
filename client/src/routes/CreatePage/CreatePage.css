@@ -1,0 +1,228 @@
+/* Base styles */
+.createPage {
+  /* background-color: #121212; */
+  color: #ffffff;
+  padding: 2rem;
+  min-height: 80vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Top Section */
+.createTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.createTop h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.createTop button {
+  background: #ff1818;
+  width: 120px;
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.createTop button:hover {
+  background-color: #be1717;
+  transform: scale(1.05);
+}
+
+/* Bottom Section */
+.createBottom {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+
+/* Upload Area */
+.upload {
+  flex: 1;
+  min-width: 280px;
+  background-color: #1e1e1e;
+  border: 2px dashed #444;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload:hover {
+  border-color: #666;
+  background-color: #222;
+}
+
+.imageIcon {
+  filter: brightness(1) invert(1);
+}
+
+.uploadTitle img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.uploadInfo {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Preview Section */
+.preview {
+  flex: 1;
+  min-width: 280px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.preview img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.removeImageBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(34, 34, 34, 0.832);
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.removeImageBtn:hover {
+  background-color: rgba(25, 25, 25, 0.9);
+  transform: scale(1.1);
+}
+
+.removeIcon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+/* Form Section */
+.createForm {
+  flex: 2;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.createFormItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.createFormItem label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.createFormItem input,
+.createFormItem textarea,
+.createFormItem select {
+  padding: 0.8rem 1rem;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.createFormItem input:focus,
+.createFormItem textarea:focus,
+.createFormItem select:focus {
+  outline: none;
+  border-color: #ff1818;
+  box-shadow: 0 0 0 2px rgba(255, 24, 24, 0.2);
+}
+
+.createFormItem textarea {
+  resize: none;
+}
+
+.createFormItem input::placeholder {
+  color: #888;
+}
+
+.createFormItem small {
+  margin-top: 0.3rem;
+  color: #777;
+  font-size: 0.8rem;
+}
+
+/* Select dropdown styling */
+.createFormItem select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 1.5rem;
+  padding-right: 2.5rem;
+}
+
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .createBottom {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .createTop {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .upload,
+  .preview,
+  .createForm {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .createPage {
+    padding: 1rem;
+  }
+  
+  .createTop h1 {
+    font-size: 1.5rem;
+  }
+}

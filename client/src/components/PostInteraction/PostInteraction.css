@@ -1,0 +1,66 @@
+.postInteraction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #333;
+}
+
+.interactionIcons {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 16px;
+  font-size: 14px;
+  color: white;
+}
+
+.interactionIcons img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1); /* makes icon white */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.interactionIcons img:hover {
+  transform: scale(1.1);
+}
+
+.postInteraction button {
+  background-color: #e60023;
+  color: white;
+  margin-bottom: 10px;
+  width: 80px;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.postInteraction button:hover {
+  background-color: #c2001d;
+}
+.interactionIcons svg {
+  cursor: pointer;
+}
+
+/* Responsive behavior */
+@media (max-width: 500px) {
+  .interactionIcons {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .interactionIcons img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .postInteraction button {
+    padding: 4px 12px;
+    font-size: 12px;
+  }
+}

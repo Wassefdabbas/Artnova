@@ -1,0 +1,110 @@
+/* General Page Styling */
+.authPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0d1117; /* Dark background */
+  padding: 1rem;
+}
+
+/* Container Styling */
+.authContainer {
+  background: #161b22; /* Slightly lighter dark box */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: #c9d1d9;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Headings */
+.authContainer h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* Form Groups */
+.formGroup {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* Labels */
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+/* Inputs */
+.formGroup input {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background: #0d1117;
+  color: #f0f6fc;
+  font-size: 0.95rem;
+}
+
+/* Inputs Focus */
+.formGroup input:focus {
+  outline: none;
+  border-color: #58a6ff;
+  background-color: #161b22;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background: #238636;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #2ea043;
+}
+
+/* Toggle Link */
+.toggleLink {
+  margin-top: 1rem;
+  color: #58a6ff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Error Message */
+.error {
+  color: #ff6b6b;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .authContainer {
+    padding: 1.5rem 1rem;
+  }
+
+  .authContainer h1 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+}

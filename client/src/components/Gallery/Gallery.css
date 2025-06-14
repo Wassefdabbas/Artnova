@@ -1,0 +1,23 @@
+.gallery {
+  column-count: 6;
+  column-gap: 16px;
+  padding: 16px;
+}
+
+@media (max-width: 1200px) {
+  .gallery {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    column-count: 1;
+  }
+}
