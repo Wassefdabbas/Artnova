@@ -45,9 +45,9 @@ function Gallery({ search, userId, boardId, saved }) {
     let url;
 
     if (saved) {
-      url = `${import.meta.env.VITE_API_ENDPOINT}/pins/saved/${userId}?cursor=${pageParam}`;
+      url = `${"https://artnova-backend.onrender.com"}/pins/saved/${userId}?cursor=${pageParam}`;
     } else {
-      url = `${import.meta.env.VITE_API_ENDPOINT}/pins?cursor=${pageParam}&search=${search || ""}&userId=${userId || ""}&boardId=${boardId || ""}`;
+      url = `${"https://artnova-backend.onrender.com"}/pins?cursor=${pageParam}&search=${search || ""}&userId=${userId || ""}&boardId=${boardId || ""}`;
     }
 
     const res = await axios.get(url);
